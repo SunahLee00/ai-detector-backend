@@ -1,12 +1,16 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import os
 from model_utils import load_models_and_vectorizer, ensemble_predict
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 MODEL_DIR = './results/cat/'
 MODEL_PATH = './results/cat/CatBoost.pkl'
 TFIDF_VECTORIZER, MODEL = load_models_and_vectorizer(MODEL_DIR, MODEL_PATH)
+
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -18,8 +22,10 @@ def predict():
 
     label, score = ensemble_predict(text, TFIDF_VECTORIZER, MODEL)
     return jsonify({
-        "label": "AI" if label == 1 else "Human",
-        "confidence": round(score, 4)
+        "ai_generated": score * 100,
+        "ai_refined": 0.0,
+        "human_refined": 0.0,
+        "human_written": (1 - score) * 100
     })
 
 if __name__ == "__main__":

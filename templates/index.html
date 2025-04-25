@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Content Detector</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo">AI Detector</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Advanced AI Content Detection</h1>
+            <p>
+              Identify AI-generated text with our state-of-the-art detection
+              technology. Perfect for educators, publishers, and businesses.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="scrollToAnalyze()">
+                Try for Free
+              </button>
+              <button class="btn btn-outline" onclick="scrollToHowItWorks()">
+                See How It Works
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/images/hero-image.jpg"
+              alt="AI Detection Dashboard"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Powerful Features</h2>
+          <p>
+            Our platform offers comprehensive tools to detect and analyze
+            AI-generated content with high accuracy.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Accuracy Metrics</h3>
+            <p>
+              Get detailed probability scores and confidence levels for each
+              analysis.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Batch Processing</h3>
+            <p>
+              Upload multiple documents at once for efficient large-scale
+              analysis.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-history"></i>
+            </div>
+            <h3>Historical Data</h3>
+            <p>
+              Track and compare results over time with our analytics dashboard.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Enterprise Security</h3>
+            <p>Military-grade encryption protects your sensitive documents.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>API Access</h3>
+            <p>
+              Integrate our detection technology directly into your workflow.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Team Collaboration</h3>
+            <p>Share results and collaborate with your team in real-time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="how-it-works-inr">
+          <div class="section-header">
+            <h2>How It Works</h2>
+            <p>
+              Our advanced algorithms analyze text using multiple detection
+              methods for unparalleled accuracy.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Upload Your Content</h3>
+                <p>
+                  Paste text directly or upload documents in various formats
+                  including PDF, DOCX, and TXT.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Advanced Analysis</h3>
+                <p>
+                  Our system evaluates multiple linguistic features including
+                  perplexity, burstiness, and semantic coherence.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Detailed Report</h3>
+                <p>
+                  Receive a comprehensive analysis highlighting potentially
+                  AI-generated sections with confidence scores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Text Analysis Section -->
+    <section class="text-analysis" id="analyze-text">
+      <div class="container">
+        <div class="text-analysis-inr">
+          <div class="section-header">
+            <h2>Analyze Your Text</h2>
+            <p>
+              Our AI detection system can instantly analyze and identify
+              AI-generated content with high accuracy.
+              <br />To analyze text, add at least 80 words.
+            </p>
+          </div>
+
+          <div class="analysis-container">
+            <div class="analysis-results">
+              <div class="result-item">
+                <label>AI-generated <span class="percentage">-</span>%</label>
+              </div>
+              <div class="result-item">
+                <label
+                  >AI-generated & AI-refined
+                  <span class="percentage">-</span>%</label
+                >
+              </div>
+              <div class="result-item">
+                <label
+                  >Human-written & AI-refined
+                  <span class="percentage">-</span>%</label
+                >
+              </div>
+              <div class="result-item">
+                <label>Human-written <span class="percentage">-</span>%</label>
+              </div>
+            </div>
+
+            <div class="analysis-input">
+              <textarea
+                placeholder="Paste your text here to analyze..."
+                id="text-to-analyze"
+              ></textarea>
+              <div class="word-count">0 words</div>
+              <button class="btn btn-primary" id="detect-ai" disabled>
+                Detect AI
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2025 AI Content Detector | University Project</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
